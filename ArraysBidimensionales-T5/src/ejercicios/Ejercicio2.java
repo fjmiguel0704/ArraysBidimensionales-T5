@@ -21,7 +21,7 @@ public class Ejercicio2 {
 		
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
-				System.out.print(tabla[i][j] + " ");
+				System.out.print("\t" + tabla[i][j] + " ");
 			}
 			
 			System.out.println();
