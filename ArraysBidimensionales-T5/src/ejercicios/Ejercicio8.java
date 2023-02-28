@@ -8,7 +8,7 @@ public class Ejercicio8 {
 		int tabla[][] = new int[5][5];
 
 		// Variable para comprobar si es simétrico
-		boolean simetrico = false;
+		boolean estado = false;
 
 		// Rellena valores
 		for (int i = 0; i < tabla.length; i++) {
@@ -21,9 +21,9 @@ public class Ejercicio8 {
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
 				if (tabla[i][j] == tabla[j][i]) {
-					simetrico = true;
+					estado = true;
 				} else {
-					simetrico = false;
+					estado = false;
 					break;
 				}
 
@@ -32,12 +32,12 @@ public class Ejercicio8 {
 
 		// Muestra tabla Principal
 		System.out.println("\tTabla Original");
-		// Recorre la fila
-		for (int fila = 0; fila < tabla.length; fila++) {
-			// Recorre la columna teniendo en cuenta la longitud de la fila
-			for (int col = 0; col < tabla[fila].length; col++) {
+		// Recorre la i
+		for (int i = 0; i < tabla.length; i++) {
+			// Recorre la jumna teniendo en cuenta la longitud de la i
+			for (int j = 0; j < tabla[i].length; j++) {
 				// Imprime la tabla mediante tabuladores
-				System.out.print("\t" + tabla[fila][col]);
+				System.out.print("\t" + tabla[i][j]);
 			}
 			// Imprime un espacio
 			System.out.println();
@@ -45,7 +45,7 @@ public class Ejercicio8 {
 		}
 
 		// Dice si la tabla es simétrica o no
-		System.out.println(simetrico ? "La tabla es simétrica" : "La tabla no es simétrica");
+		System.out.println(estado ? "La tabla es simétrica" : "La tabla no es simétrica");
 
 	}
 
