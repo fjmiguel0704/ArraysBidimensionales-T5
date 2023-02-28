@@ -14,11 +14,18 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
+
+		// Creamos el scanner para leer por teclado
 		Scanner read = new Scanner(System.in);
 
+		// Definimos el array de 4x5
 		int tabla[][] = new int[4][5];
+
+		// Guardará las notas de cada uno de los alumnos
 		int notas;
 
+		// Recorremos filas y columnas, donde iremos preguntando cada una de las notas
+		// del alumno y las iremos guardando en la tabla
 		for (int i = 0; i < tabla.length; i++) {
 			System.out.println("Introduce las notas de los alumos:");
 			for (int j = 0; j < tabla[i].length; j++) {
@@ -27,6 +34,7 @@ public class Ejercicio3 {
 			}
 		}
 
+		// Mostramos la tabla de notas
 		System.out.println("Tabla de notas:");
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
@@ -35,6 +43,8 @@ public class Ejercicio3 {
 			System.out.println();
 		}
 
+		// Recorremos de nuevo las filas y columnas de la tabla e iremos comprobando
+		// cual es la nota más baja y mas alta y calculamos la media de todas las notas
 		for (int i = 0; i < tabla.length; i++) {
 			int max = 0;
 			int min = 10;
@@ -50,10 +60,12 @@ public class Ejercicio3 {
 
 				media += tabla[i][j];
 			}
+
+			// Finalmente mostramos nota mas baja, mas alta y nota media
 			media = media / tabla[i].length;
-			System.out.println("Nota mínima: " + (i+1) + min);
-			System.out.println("Nota máxina: " + (i+1) + max);
-			System.out.println("Nota media: " + (i+1) + media);
+			System.out.println("Nota mínima: " + (i + 1) + min);
+			System.out.println("Nota máxina: " + (i + 1) + max);
+			System.out.println("Nota media: " + (i + 1) + media);
 		}
 
 	}

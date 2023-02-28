@@ -11,19 +11,24 @@ package ejercicios;
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
+
+		// Definimos el array de 10x10
 		int tabla[][] = new int[10][10];
 
+		// Recorremos filas y columnas, donde se irán rellenando según los cálculos de
+		// multiplicar ambas
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
-				tabla[i][j]=(i+1)*(j+1);
+				tabla[i][j] = (i + 1) * (j + 1);
 			}
 		}
-		
+
+		// Mostramos cpmo quedaría la tabla
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
 				System.out.print("\t" + tabla[i][j] + " ");
 			}
-			
+
 			System.out.println();
 		}
 	}

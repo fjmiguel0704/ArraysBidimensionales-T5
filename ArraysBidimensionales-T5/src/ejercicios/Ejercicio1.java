@@ -11,19 +11,25 @@ package ejercicios;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
+
+		// Definimos el array de longitud 5x5
 		int tabla[][] = new int[5][5];
 
+		// Recorremos filas y columnas
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
+
+				// Asignamos a los valores de las posiciones el resultado del siguiente cálculo
 				tabla[i][j] = 10 * i + j;
 			}
 		}
 
+		// Mostramos como quedaría la tabla
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
 				System.out.print(tabla[i][j] + " ");
 			}
-			
+
 			System.out.println();
 		}
 	}
